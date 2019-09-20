@@ -1,0 +1,3 @@
+--java -jar selenium-server-standalone-4.0.0-alpha-1.jar
+--npm test -- --tag bf
+--npm run debug -- -- --tag bf
