@@ -14,8 +14,10 @@ module.exports = {
             .setEmail(Email)
             .setPass(Pass)
             .login()
-            .pause(2000)
-            .closeButtonPopUp();
+            .pause(5000)
+            .closeButtonPopUp()
+            .pause(5000)
+            .receiveClick();
             
             browser
             .saveScreenshot('test_output/login.png')

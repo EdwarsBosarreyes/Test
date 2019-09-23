@@ -5,7 +5,8 @@ module.exports = {
         inputEmail: '#email',
         inputPassword: '#password',
         loginButton : '.btn[type="submit"]',
-        closePopUp: '.txt-ad-close-button'
+        closePopUp: '.txt-ad-close-button',
+        receiveButton: '.nav-link[href="/receive"]'
     },
     commands: [{
         setEmail(value){
@@ -24,7 +25,11 @@ module.exports = {
         closeButtonPopUp(){
             return this
                 .click('@closePopUp');
-        }
+        },
+        receiveClick(){
+            return this
+                .click('@receiveButton');          
+        },
        
     }]
 };
