@@ -5,7 +5,7 @@ module.exports = {
         inputEmail: '#email',
         inputPassword: '#password',
         loginButton : '.btn[type="submit"]',
-        
+        closePopUp: '.txt-ad-close-button'
     },
     commands: [{
         setEmail(value){
@@ -21,6 +21,10 @@ module.exports = {
             return this
                 .click('@loginButton');
         },
+        closeButtonPopUp(){
+            return this
+                .click('@closePopUp');
+        }
        
     }]
 };

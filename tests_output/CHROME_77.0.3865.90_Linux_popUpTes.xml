@@ -5,11 +5,9 @@
 
   <testsuite name="popUpTes"
     errors="0" failures="0" hostname="" id="" package="popUpTes" skipped="0"
-    tests="1" time="4.972" timestamp="">
+    tests="1" time="6.178" timestamp="">
   
-    <testcase name="Bitfoliex Login" classname="popUpTes" time="4.972" assertions="1">
-
-    
+    <testcase name="Bitfoliex Login" classname="popUpTes" time="6.178" assertions="0">
     </testcase>
   
 

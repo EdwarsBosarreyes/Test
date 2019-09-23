@@ -7,23 +7,32 @@ module.exports = {
         const Pass = 'Edwars1992';
         
 
-        const page = browser.page.bfPage();
+        const page = browser.page.popUpPage();
 
         page
             .navigate()
             .setEmail(Email)
             .setPass(Pass)
-            .login();
+            .login()
+            .pause(2000)
+            .closeButtonPopUp();
             
             browser
+            .saveScreenshot('test_output/login.png')
             .pause(2000)
-            .execute(function() {
+            /*.execute(function() {
                 return window.localStorage.getItem('pop-up-date');
               }, [], function(result) {
-                this.assert.equal(result.value, 20);
-              })
-            .saveScreenshot('test_output/login.png')
-            .pause(1000);
+                //this.assert.equal(result.value, 20);
+                if (result.value != null){
+                    browser.pause(2000);
+                    console.log("El valor es: "+" "+result.value);
+                    browser.saveScreenshot('test_output/login.png')
+                    .pause(2000);   
+                }
+
+              });*/
+              
 
     }
 }
