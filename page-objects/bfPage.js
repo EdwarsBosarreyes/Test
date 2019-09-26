@@ -6,7 +6,9 @@ module.exports = {
         inputPassword: '#password',
         loginButton : '.btn[type="submit"]',
         closePopUp: '.txt-ad-close-button',
-        receiveButton: '.nav-link[href="/receive"]'
+        receiveButton: '.nav-link[href="/receive"]',
+        cryptoSelector: '.crypto-selector',
+        //divClass: '.modal-body'
     },
     commands: [{
         setEmail(value){
@@ -30,6 +32,14 @@ module.exports = {
             return this
                 .click('@receiveButton');          
         },
+        selectCrypto(){
+            return this
+                .click('@cryptoSelector');
+        },
+        /*changeBitcoin(){
+            return this
+                .click("//*[contains(text(), 'Bitcoin')]");
+        }*/
        
     }]
 };

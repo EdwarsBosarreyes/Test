@@ -16,8 +16,10 @@ module.exports = {
             .login()
             .pause(5000)
             .closeButtonPopUp()
-            .pause(5000)
-            .receiveClick();
+            .pause(3000)
+            .receiveClick()
+            .selectCrypto();
+            //.changeBitcoin();
             
             browser
             .saveScreenshot('test_output/login.png')
