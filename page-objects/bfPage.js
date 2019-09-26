@@ -5,9 +5,8 @@ module.exports = {
         inputEmail: '#email',
         inputPassword: '#password',
         loginButton : '.btn[type="submit"]',
-        exchangeButton: '.nav-link[href="/exchange"]',
-        //buyTraxButton: '.nav-link[href="/buytxt"]',   
-        inputAmountBuy: '#form-control',
+        closePopUp: '.txt-ad-close-button',
+        receiveButton: '.nav-link[href="/receive"]'
     },
     commands: [{
         setEmail(value){
@@ -23,18 +22,14 @@ module.exports = {
             return this
                 .click('@loginButton');
         },
-        /*buyTraxalt(){
+        closeButtonPopUp(){
             return this
-                .click('@buyTraxButton');          
-        },*/
-        exchange(){
-            return this
-                .click('@exchangeButton');          
+                .click('@closePopUp');
         },
-        /*setAmountbuy(value){
+        receiveClick(){
             return this
-                .setValue('@inputAmountBuy', value);
-        }*/
-
+                .click('@receiveButton');          
+        },
+       
     }]
 };

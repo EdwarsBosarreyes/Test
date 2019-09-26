@@ -5,7 +5,6 @@ module.exports = {
 
         const Email= 'ebosarreyes@masterdevel.com';
         const Pass = 'Edwars1992';
-        const amountSend = 1;
         
 
         const page = browser.page.bfPage();
@@ -15,15 +14,27 @@ module.exports = {
             .setEmail(Email)
             .setPass(Pass)
             .login()
-            //.buyTraxalt()
-            .exchange()
-            //.setAmountbuy(amountBuy);
-            //.pause(20000)
+            .pause(5000)
+            .closeButtonPopUp()
+            .pause(5000)
+            .receiveClick();
+            
             browser
-            //.waitForElementVisible('.txt-ad-body')
-            //.verify.elementNotPresent('.txt-ad-body', 'PopUp No Presente')
             .saveScreenshot('test_output/login.png')
-            .pause(20000)
+            .pause(2000)
+            /*.execute(function() {
+                return window.localStorage.getItem('pop-up-date');
+              }, [], function(result) {
+                //this.assert.equal(result.value, 20);
+                if (result.value != null){
+                    browser.pause(2000);
+                    console.log("El valor es: "+" "+result.value);
+                    browser.saveScreenshot('test_output/login.png')
+                    .pause(2000);   
+                }
+
+              });*/
+              
 
     }
 }
