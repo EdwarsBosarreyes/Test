@@ -36,10 +36,10 @@ module.exports = {
             return this
                 .click('@cryptoSelector');
         },
-        /*changeBitcoin(){
+        changeBitcoin(){
             return this
                 .click("//*[contains(text(), 'Bitcoin')]");
-        }*/
+        }
        
     }]
 };
