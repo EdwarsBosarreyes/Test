@@ -1,6 +1,6 @@
 module.exports = {
-    //url: 'https://app.bitfoliex.com/login',
-    url: 'https://app.vlcntest.com/login',
+    url: 'https://app.bitfoliex.com/login',
+    //url: 'https://app.vlcntest.com/login',
     elements: {
         inputEmail: '#email',
         inputPassword: '#password',
@@ -35,12 +35,12 @@ module.exports = {
         selectCrypto(){
             return this
                 .click('@cryptoSelector');
-        },
+        }/*,
         changeBitcoin(){
             return this
                 //.useXpath()
                 //.click(".//text()[contains(.,'Bitcoin Cash')]/..");
-        }
+        }*/
        
     }]
 };

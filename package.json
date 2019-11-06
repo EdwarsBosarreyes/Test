@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "chromedriver": "^76.0.1",
-    "geckodriver": "^1.16.2"
+    "geckodriver": "^1.16.2",
+    "protractor": "^5.4.2"
   }
 }

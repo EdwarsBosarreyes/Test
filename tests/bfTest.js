@@ -17,12 +17,13 @@ module.exports = {
             .pause(5000)
             .closeButtonPopUp()
             .pause(3000)
-            .receiveClick()
+            .receiveClick()       
             .selectCrypto();
             //.changeBitcoin();
             
             browser
-            
+            //.assert.attributeContains('img', 'src', '/_nuxt/img/bitcoin.d7876d4.svg')    
+            //.assert.visible('//img[@*src="/_nuxt/img/bitcoin.d7876d4.svg"]')
             .saveScreenshot('test_output/login.png')
             .pause(2000)
             /*.execute(function() {
