@@ -22,6 +22,7 @@ module.exports = {
             //.changeBitcoin();
             
             browser
+            
             .saveScreenshot('test_output/login.png')
             .pause(2000)
             /*.execute(function() {

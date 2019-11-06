@@ -38,7 +38,8 @@ module.exports = {
         },
         changeBitcoin(){
             return this
-                .click("//*[contains(text(), 'Bitcoin')]");
+                //.useXpath()
+                //.click(".//text()[contains(.,'Bitcoin Cash')]/..");
         }
        
     }]
