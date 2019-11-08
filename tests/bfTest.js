@@ -15,36 +15,39 @@ module.exports = {
             .setPass(Pass)
             .login()
             .saveScreenshot('test_output/login.png')
-            .pause(2000)
+            .pause(3000)
             .saveScreenshot('test_output/home.png')
             .closeButtonPopUp()
-            .pause(3000)
+            .pause(1000)
             .receiveClick()
+            .pause(1000)
             .saveScreenshot('test_output/receive.png')
             .selectCrypto()
             .pause(1000)
             .saveScreenshot('test_output/modal.png')
-            /*.verify.elementPresent('.crypto-modal', 'Encontrado')
-            .verify.elementPresent('.crypto-modal li:nth-child(1)', 'Bitcoin')
-            .verify.elementPresent('.crypto-modal li:nth-child(2)', 'Ethereum')
-            .verify.elementPresent('.crypto-modal li:nth-child(3)', 'Bitcoin Cash')
-            .verify.elementPresent('.crypto-modal li:nth-child(4)', 'Stellar')
-            .verify.elementPresent('.crypto-modal li:nth-child(5)', 'Traxalt')*/
             .changeEthereum()
             .pause(1000)
             .saveScreenshot('test_output/receive-Ethereum.png')
             .selectCrypto()
+            .pause(1000)
             .changeBitcoinCash()
             .pause(1000)
-            .saveScreenshot('test_output/receive-BitcoinCash.png');
-            //.click('.crypto-modal img:nth-child(1)');
-            
-            
-           /* browser
-            
-            .saveScreenshot('test_output/login.png')
-            .pause(2000)
-             */ 
-
+            .saveScreenshot('test_output/receive-BitcoinCash.png')
+            .selectCrypto()
+            .pause(1000)
+            .changeStellar()
+            .pause(1000)
+            .saveScreenshot('test_output/receive-Stellar.png')
+            .selectCrypto()
+            .pause(1000)
+            .changeTraxalt()
+            .pause(1000)
+            .saveScreenshot('test_output/receive-Traxalt.png')
+            .selectCrypto()
+            .pause(1000)
+            .changeBitcoin()
+            .pause(1000)
+            .saveScreenshot('test_output/receive-Bitcoin.png');
+     
     }
 }

@@ -8,8 +8,12 @@ module.exports = {
         closePopUp: '.txt-ad-close-button',
         receiveButton: '.nav-link[href="/receive"]',
         cryptoSelector: '.crypto-selector',
+        selectBitcoin: '.crypto-modal li:nth-child(1)',
         selectEthereum: '.crypto-modal li:nth-child(2)',
         selectBitcoinCash: '.crypto-modal li:nth-child(3)',
+        selectStellar: '.crypto-modal li:nth-child(4)',
+        selectTraxalt: '.crypto-modal li:nth-child(5)',
+
         
     },
     commands: [{
@@ -47,7 +51,23 @@ module.exports = {
         changeBitcoinCash(){
             return this
                 .click('@selectBitcoinCash');
+        },
+
+        changeStellar(){
+            return this
+                .click('@selectStellar');
+        },
+
+        changeTraxalt(){
+            return this
+                .click('@selectTraxalt');
+        },
+
+        changeBitcoin(){
+            return this
+                .click('@selectBitcoin');
         }
+       
        
     }]
 };

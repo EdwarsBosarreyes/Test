@@ -5,9 +5,9 @@
 
   <testsuite name="bfTest"
     errors="0" failures="0" hostname="" id="" package="bfTest" skipped="0"
-    tests="1" time="11.15" timestamp="">
+    tests="1" time="25.41" timestamp="">
   
-    <testcase name="Bitfoliex Login" classname="bfTest" time="11.15" assertions="0">
+    <testcase name="Bitfoliex Login" classname="bfTest" time="25.41" assertions="0">
     </testcase>
   
 
