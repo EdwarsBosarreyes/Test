@@ -11,17 +11,22 @@ module.exports = {
 
         page
             .navigate()
+
+            //LOGIN
             .setEmail(Email)
             .setPass(Pass)
             .login()
             .saveScreenshot('test_output/login.png')
             .pause(3000)
             .saveScreenshot('test_output/home.png')
+            //Cerrar Pop-Up
             .closeButtonPopUp()
             .pause(1000)
+            //Clickear Receive
             .receiveClick()
             .pause(1000)
             .saveScreenshot('test_output/receive.png')
+            //Cambiar Crypto
             .selectCrypto()
             .pause(1000)
             .saveScreenshot('test_output/modal.png')
@@ -51,3 +56,5 @@ module.exports = {
      
     }
 }
+
+//npm test -- --tag bf
