@@ -14,31 +14,37 @@ module.exports = {
             .setEmail(Email)
             .setPass(Pass)
             .login()
-            .pause(5000)
-            .closeButtonPopUp()
-            .pause(3000)
-            .receiveClick()       
-            .selectCrypto();
-            //.changeBitcoin();
-            
-            browser
-            //.assert.attributeContains('img', 'src', '/_nuxt/img/bitcoin.d7876d4.svg')    
-            //.assert.visible('//img[@*src="/_nuxt/img/bitcoin.d7876d4.svg"]')
             .saveScreenshot('test_output/login.png')
             .pause(2000)
-            /*.execute(function() {
-                return window.localStorage.getItem('pop-up-date');
-              }, [], function(result) {
-                //this.assert.equal(result.value, 20);
-                if (result.value != null){
-                    browser.pause(2000);
-                    console.log("El valor es: "+" "+result.value);
-                    browser.saveScreenshot('test_output/login.png')
-                    .pause(2000);   
-                }
-
-              });*/
-              
+            .saveScreenshot('test_output/home.png')
+            .closeButtonPopUp()
+            .pause(3000)
+            .receiveClick()
+            .saveScreenshot('test_output/receive.png')
+            .selectCrypto()
+            .pause(1000)
+            .saveScreenshot('test_output/modal.png')
+            /*.verify.elementPresent('.crypto-modal', 'Encontrado')
+            .verify.elementPresent('.crypto-modal li:nth-child(1)', 'Bitcoin')
+            .verify.elementPresent('.crypto-modal li:nth-child(2)', 'Ethereum')
+            .verify.elementPresent('.crypto-modal li:nth-child(3)', 'Bitcoin Cash')
+            .verify.elementPresent('.crypto-modal li:nth-child(4)', 'Stellar')
+            .verify.elementPresent('.crypto-modal li:nth-child(5)', 'Traxalt')*/
+            .changeEthereum()
+            .pause(1000)
+            .saveScreenshot('test_output/receive-Ethereum.png')
+            .selectCrypto()
+            .changeBitcoinCash()
+            .pause(1000)
+            .saveScreenshot('test_output/receive-BitcoinCash.png');
+            //.click('.crypto-modal img:nth-child(1)');
+            
+            
+           /* browser
+            
+            .saveScreenshot('test_output/login.png')
+            .pause(2000)
+             */ 
 
     }
 }

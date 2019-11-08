@@ -8,7 +8,9 @@ module.exports = {
         closePopUp: '.txt-ad-close-button',
         receiveButton: '.nav-link[href="/receive"]',
         cryptoSelector: '.crypto-selector',
-        //divClass: '.modal-body'
+        selectEthereum: '.crypto-modal li:nth-child(2)',
+        selectBitcoinCash: '.crypto-modal li:nth-child(3)',
+        
     },
     commands: [{
         setEmail(value){
@@ -35,12 +37,17 @@ module.exports = {
         selectCrypto(){
             return this
                 .click('@cryptoSelector');
-        }/*,
-        changeBitcoin(){
+        },
+
+        changeEthereum(){
             return this
-                //.useXpath()
-                //.click(".//text()[contains(.,'Bitcoin Cash')]/..");
-        }*/
+                .click('@selectEthereum');
+        },
+
+        changeBitcoinCash(){
+            return this
+                .click('@selectBitcoinCash');
+        }
        
     }]
 };
