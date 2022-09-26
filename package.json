@@ -15,7 +15,7 @@
   "dependencies": {
     "cucumber": "^5.1.0",
     "cucumber-pretty": "^1.5.2",
-    "nightwatch": "^1.2.2",
+    "nightwatch": "^1.7.13",
     "nightwatch-api": "^2.3.0",
     "nightwatch-vrt": "^0.2.10"
   },
